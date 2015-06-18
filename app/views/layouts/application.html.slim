@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html
+  head
+    title PersonalSite
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags 
+  body
+    p.notice
+      = notice
+    p.alert
+      = alert
+
+    #main-container.container-fluid
+      .row
+        #sidebar.col-xs-3
+          ul
+            li
+              a href='#' Blog
+            li
+              a href='#' About
+            li
+              a href='#' Contact
+        #main-content.col-xs-9
+          = yield 
