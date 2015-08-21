@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  access all: [:show,:index], user: :all
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
