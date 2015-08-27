@@ -29,8 +29,10 @@ gem 'petergate'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
 
 gem 'annotate'
+gem 'will_paginate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
