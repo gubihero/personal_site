@@ -1,19 +1,26 @@
-h1 THE BLOG
 
-- @posts.each do |post|
-  = link_to content_tag(:h2, post.title), post
-  p = post.content
-  p = post.user
-  = link_to 'Show', post
+#posts-container.col-lg-offset-2
+
+  h1 THE BLOG
+
   - if logged_in?(:user)
-    td = link_to 'Edit', edit_post_path(post)
-    td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
+    = link_to 'New Post', new_post_path, class: 'fa fa-plus'
 
-br
+  .col-lg-8
 
-- if logged_in?(:user)
-  = link_to 'New Post', new_post_path
+    - @posts.each do |post|
+      .post-card
+        .post-card-header
+          = link_to content_tag(:h2, post.title), post
+          - if logged_in?(:user)
+            = link_to content_tag(:span, ''), edit_post_path(post), class: 'fa fa-pencil pull-right'
+            = link_to content_tag(:span, ''), post, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'fa fa-times pull-right'
+        .post-card-body
+          p = post.content
+          p = post.user
 
-= will_paginate @posts 
+      
+
+  = will_paginate @posts 
 
 
