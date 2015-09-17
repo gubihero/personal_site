@@ -1,12 +1,13 @@
 
-#posts-container.col-lg-offset-2
+#posts-container.col-lg-offset-3
 
   h1 THE BLOG
 
-  - if logged_in?(:user)
-    = link_to 'New Post', new_post_path, class: 'fa fa-plus'
+  .col-lg-9
+    
+    - if logged_in?(:user)
+      = link_to 'New Post', new_post_path, class: 'fa fa-plus'
 
-  .col-lg-8
 
     - @posts.each do |post|
       .post-card
@@ -21,6 +22,6 @@
 
       
 
-  = will_paginate @posts 
+    = will_paginate @posts 
 
 
