@@ -1,9 +1,9 @@
 
-#posts-container.col-lg-offset-3
+#posts-container
 
   h1 THE BLOG
 
-  .col-lg-9
+  .col-lg-12
     
     - if logged_in?(:user)
       = link_to 'New Post', new_post_path, class: 'fa fa-plus'

@@ -3,24 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #posts-container{
-
-  a:hover {
-    color: #ff0000;
-    text-decoration:none;
-  }
-
+ 
   .post-card {
   }
 
   .post-card-header {
     padding: 5px;
-    background-color: #990055;
+    a{
+        color: #000000;
+        text-decoration:none;
+    }
+
   }
 
   .post-card-body {
     padding: 10px;
     background-color: #002244;
     color: #dddddd;
+    border-radius:10px;
   }
 
 }
