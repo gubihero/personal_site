@@ -18,8 +18,6 @@
             = link_to content_tag(:span, ''), post, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'fa fa-times pull-right'
         .post-card-body
           p = post.content
-          p = post.user
-
       
 
     = will_paginate @posts 
